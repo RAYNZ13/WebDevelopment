@@ -1,0 +1,22 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="title">
+            <h1>Chennai Central Passenger Counter</h1>
+        </div>
+        <br>
+        <br>
+        <div class="main">
+            <h2>People entered:</h2>
+            <h2 id="count-el">0</h2>
+            <div class="button-container">
+                <button id="increment-btn" onclick="increment()"><span>INCREMENT</span></button>
+                <button id="save-btn" onclick="save()"><span>SAVE</span></button>
+            </div>
+            <p id = "save-el">Previous Entries : </p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
