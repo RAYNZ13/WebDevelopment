@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba(230,174,238,1) 0%, rgba(134,32,150,1) 100%);
+  color: #fff;
+  padding: 10px;
+}
+
+.calculator{
+  width: 100%;
+  max-width: 600px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.calculator h1{
+  font-size: 60px;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, .7);
+}
+
+.calculator h1 span{
+  color:bisque;
+  
+}
+.input-box{
+    margin: 40px 0;
+    padding: 35px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 5px 3px 10px 0 rgb(254, 253, 254);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    display: flex;
+    align-items: center;
+    
+}
+.input-box input{
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    font-size: 20px;
+    background-color: rgba(63,94,251,1) 0%;
+
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    background : #9B52AA;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    display: inline-block;
+    position: relative;
+  }
+  
+  button:after {
+    content: '→'; /* Default content for increment button */
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+#age-el{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: inherit;
+}
+#age-el span{
+    color: rgb(0, 0, 0);
+}
