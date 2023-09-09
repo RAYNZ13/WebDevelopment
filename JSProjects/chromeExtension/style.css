@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    min-width: 400px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    box-sizing: border-box;
+    border: 2px solid green;
+    margin-bottom: 4px;
+}
+
+input:focus{
+    border-color: #013002;
+    outline: none;
+}
+
+#save-btn{
+
+    border: none;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(6, 142, 6);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid white;
+
+}
+
+#save-btn:hover{
+    background-color: white;
+    color: #054607;
+}
+
+#tab-btn{
+    margin-left: 5px;
+    border: none;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(6, 142, 6);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid white;
+}
+
+#tab-btn:hover{
+    background-color: white;
+    color: #054607;
+}
+#delete-btn{
+    margin-left: 5px;
+    border: none;
+    color: rgb(6, 142, 6);
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid rgb(6, 142, 6);
+}
+
+#delete-btn:hover{
+    background-color: #054607;
+    color: white;
+}
+
+ul{
+    list-style-type:none;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+li{
+    margin-top: 5px;
+}
+
+li a{
+    color: rgb(6, 142, 6);
+}
+li a:hover{
+    color: #043605;
+}
