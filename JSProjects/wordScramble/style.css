@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #9d14dc;
+}
+
+.container{
+    width: 420px;
+    border-radius: 10px;
+    background: #222;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.635);
+}
+.container h2{
+    font-size: 28px;
+    font-weight: 600;
+    padding: 20px 25px;
+    border-bottom: 1px solid #333;
+    color: #fff;
+}
+
+.container content{
+    margin: 25px 20px 35px;
+}
+
+.content #word{
+    user-select: none;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 18px;
+    margin-right: -18px;
+    word-break: break-all;
+    text-transform: uppercase;
+    color: #5372f0;
+}
+.content .details{
+    margin: 25px 0 20px;
+}
+.details p{
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin: 20px;
+}
+
+.content input{
+    width: 90%;
+    height: 50px;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background-color: #111;
+    color: #bbb;
+    margin: 20px;
+}
+
+.content input:focus{
+    border-color: #5372f0;
+    background-color: #222;
+    color: #fff;
+}
+
+.content input::placeholder{
+    color: #bbb;;
+}
+
+.content input:focus::placeholder{
+    color: #bbb;
+}
+
+.content .buttons{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.buttons button{
+    width: 48%;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.buttons button:active{
+    transform: scale(0.97);
+}
+
+.buttons #refresh-btn{
+    background: #6c7f7d;
+
+}
+.buttons #refresh-btn:hover{
+    background: #5c6f6d;
+}
+
+.buttons #check-btn{
+    background: #6c7f7d;
+
+}
+.buttons #check-btn:hover{
+    background: #5c6f6d;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Word Scramble..</h2>
+        <div class="content">
+            <p id="word"></p>
+            <div class="details">
+                <p id="hints"><span>Hints: </span></p>
+                <p id="time">Time : <span><b>30</b>s</span></p>
+            </div>
+            <input type="text" spellcheck="false" placeholder="Enter a valid word">
+            <div class="buttons">
+                <button id="refresh-btn" onclick="refresh()">Refresh Word</button>
+                <button id="check-btn" onclick="check()">Check Word</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
