@@ -1,7 +1,20 @@
-let color = "black"; //global declaration
+let color = "black";
+let click = false; //global declaration
 document.addEventListener("DOMContentLoaded", function() {
     createGrid(16);
     let popupEl = document.querySelector('#popup');
+
+    document.querySelector("body").addEventListener("click",function(e){
+        if(e.target.tagName != "BUTTON"){
+            click = !click;
+            let drawEl = document.querySelector("#draw");
+            if(click){
+                drawEl.innerHTML = "You are allowed to Draw";
+            }else{
+                drawEl.innerHTML = "You are not allowed to Draw, click one and proceed";
+            }
+        }
+    })
 
     popupEl.addEventListener("click",function(){
         let size = getSize();
@@ -41,12 +54,14 @@ function getSize(){
 
 function colorDiv(e){
     //e is the event object
-    console.log(e);
-    if(color == "random"){
-        this.style.backgroundColor =  `hsl(${Math.random()*360},100%,50%)`;
-    }else{
-        this.style.backgroundColor = 'black';
-    }
+    if(click){
+            console.log(e);
+            if(color == "random"){
+                this.style.backgroundColor =  `hsl(${Math.random()*360},100%,50%)`;
+            }else{
+                this.style.backgroundColor = 'black';
+            }
+        }
 }
 
 function setColor(colorChoice){
