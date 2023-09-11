@@ -14,11 +14,12 @@
         <h6>Select the size</h6>
         <button id="popup" class="btn btn-outline-success">Select</button>
     </div>
+    <p id="message"></p>
     <div class="board"></div>
     <div class="footer">
-        <button class="btn btn-outline-dark">Black</button>
-        <button class="btn btn-outline-primary">Random</button>
-        <button class="btn btn-outline-danger">Erase</button>
+        <button class="btn btn-outline-dark" onclick="setColor('black')">Black</button>
+        <button class="btn btn-outline-primary" onclick="setColor('random')">Random</button>
+        <button class="btn btn-outline-danger" onclick="erase()">Erase</button>
     </div>
 
     <script src="main.js"></script>

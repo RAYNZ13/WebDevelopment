@@ -1,5 +1,12 @@
+let color = "black"; //global declaration
 document.addEventListener("DOMContentLoaded", function() {
     createGrid(16);
+    let popupEl = document.querySelector('#popup');
+
+    popupEl.addEventListener("click",function(){
+        let size = getSize();
+        createGrid(size);
+    })
     console.log("DOM fully loaded and parsed");
 });
 
@@ -13,7 +20,40 @@ function createGrid(size){
 
     for(let i=0;i<numDivs;i++){
         let div = document.createElement("div");
-        div.style.backgroundColor = "red";
+        div.addEventListener("mouseover",colorDiv);
         boardEl.insertAdjacentElement("beforeend",div);
     }
+}
+
+
+function getSize(){
+    let input =  prompt("What will be the size of the grid? (1-100)"); 
+    let messageEl = document.querySelector("#message");
+    if(input == ""){
+        messageEl.innerHTML = "Please enter a number";
+    }else if(input<0 || input>100){
+        messageEl.innerHTML = "Please enter a number between 1 and 100";
+    }else{
+        messageEl.innerHTML = "Now you can play"
+    }
+    return input;   
+}
+
+function colorDiv(e){
+    //e is the event object
+    console.log(e);
+    if(color == "random"){
+        this.style.backgroundColor =  `hsl(${Math.random()*360},100%,50%)`;
+    }else{
+        this.style.backgroundColor = 'black';
+    }
+}
+
+function setColor(colorChoice){
+    color = colorChoice;
+}
+
+function erase(){
+    let divs = document.querySelectorAll("div");
+    divs.forEach((div) => div.style.backgroundColor = "white");
 }
