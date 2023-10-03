@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .board {
+            display: grid;
+            gap: 1px;
+            margin: 20px auto;
+        }
+
+        .board div {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            transition: background-color 0.2s;
+        }
+
+        #popup {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Etch-a-Sketch</h1>
+    <button id="darkModeButton">Toggle Dark Mode</button>
+    <div class="controls">
+        <button onclick="setColor('black')">Black</button>
+        <button onclick="setColor('random')">Random Color</button>
+        <button onclick="erase()">Erase</button>
+        <span id="draw">You are not allowed to Draw, click one and proceed</span>
+    </div>
+    <div id="message"></div>
+    <div class="board"></div>
+    <div id="popup">
+        <button onclick="resetGrid()">Change Grid Size</button>
+    </div>
+
+    <script>
+        let color = "black";
+        let click = false; // global declaration
+        let isDarkMode = false; // Track dark mode state
+
+        document.addEventListener("DOMContentLoaded", function() {
+            createGrid(16);
+            let popupEl = document.querySelector('#popup');
+            let darkModeButton = document.querySelector('#darkModeButton'); // Get the dark mode button element
+
+            document.querySelector("body").addEventListener("click", function(e) {
+                if (e.target.tagName != "BUTTON") {
+                    click = !click;
+                    let drawEl = document.querySelector("#draw");
+                    if (click) {
+                        drawEl.innerHTML = "You are allowed to Draw";
+                    } else {
+                        drawEl.innerHTML = "You are not allowed to Draw, click one and proceed";
+                    }
+                }
+            });
+
+            popupEl.addEventListener("click", function() {
+                let size = getSize();
+                createGrid(size);
+            });
+
+            darkModeButton.addEventListener("click", function() {
+                toggleDarkMode(); // Add an event listener to the dark mode button
+            });
+
+            console.log("DOM fully loaded and parsed");
+        });
+
+        function createGrid(size) {
+            let boardEl = document.querySelector(".board");
+
+            boardEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+            boardEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+            let numDivs = size * size;
+
+            boardEl.innerHTML = ''; // Clear previous grid
+
+            for (let i = 0; i < numDivs; i++) {
+                let div = document.createElement("div");
+                div.addEventListener("mouseover", colorDiv);
+                boardEl.appendChild(div);
+            }
+        }
+
+        function getSize() {
+            let input = prompt("What will be the size of the grid? (1-100)");
+            let messageEl = document.querySelector("#message");
+            if (input == "") {
+                messageEl.innerHTML = "Please enter a number";
+            } else if (input < 0 || input > 100) {
+                messageEl.innerHTML = "Please enter a number between 1 and 100";
+            } else {
+                messageEl.innerHTML = "Now you can play";
+            }
+            return input;
+        }
+
+        function colorDiv(e) {
+            // e is the event object
+            if (click) {
+                console.log(e);
+                if (color == "random") {
+                    this.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
+                } else {
+                    this.style.backgroundColor = 'black';
+                }
+            }
+        }
+
+        function setColor(colorChoice) {
+            color = colorChoice;
+        }
+
+        function erase() {
+            let divs = document.querySelectorAll("div");
+            divs.forEach((div) => div.style.backgroundColor = "white");
+        }
+
+        function resetGrid() {
+            let size = getSize();
+            createGrid(size);
+        }
+
+        // Add a function to toggle dark mode
+        function toggleDarkMode() {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle("dark-mode", isDarkMode); // Apply a CSS class for dark mode
+        }
+    </script>
+</body>
+</html>

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 drawEl.innerHTML = "You are not allowed to Draw, click one and proceed";
             }
         }
+        
     })
 
     popupEl.addEventListener("click",function(){
