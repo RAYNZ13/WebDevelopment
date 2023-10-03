@@ -33,13 +33,26 @@
             list-style: none;
             margin: 0 23px;
         }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: #ffffff;
+            background: #d712ff;
+            box-shadow: 0 0 50px #cd2aff;
+            border: 5px solid #d712ff;
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
         .left{
             font-size: 2rem;
         }
         .first{
             display: flex;
             justify-content: space-around;
-            margin: 80px 0;
+            /* margin: 80px 0; */
+            align-items: center;
         }
         .first > div{
             width: 30%;
@@ -52,6 +65,26 @@
             width: 80%;
             margin: 50px 0;
         }
+        .violet{
+            color: rgb(208, 0, 255);
+        }
+        .interest{
+            white-space: nowrap;
+        }
+        #element{
+            background-color: rgb(208, 0, 255); 
+            border-radius: 25px;
+            margin-top: 10px;
+            /* margin-right: 80px; */
+            padding-left: 10px;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        .second{
+            max-width: 80vw;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -60,11 +93,11 @@
             <div class="left">Rayyan's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contacts</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contacts</a></li>
                 </ul>
             </div>
         </nav>
@@ -72,13 +105,30 @@
     
     <main>
         <section class="first">
-            <div class="left-section">Hi, It's me Rayyan 
-                <div>and I am a Web Developer</div>
+            <div class="left-section">
+                Hi, It's me <span class="violet">Rayyan</span>  
+                <div class="interest">and I am a passionate</div>
+                <!-- <div class="role">Web Developer</div> -->
+                <span id="element"></span>
             </div>
             <div class="right-section">
                 <img src="./images/PngItem_1127587.png" alt="">
             </div>
         </section>
+
+        <section class="second">
+            <h1>About Me</h1>
+            <img src="" alt="">
+        </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Graphic Designer', 'Freelancer'],
+      typeSpeed: 50,
+    });
+  </script>
+    
 </body>
 </html>
