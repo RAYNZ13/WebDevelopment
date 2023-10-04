@@ -61,10 +61,6 @@
             font-size: 3rem;
             margin: 30px 0;
         }
-        .right-section img{
-            width: 80%;
-            margin: 50px 0;
-        }
         .violet{
             color: rgb(208, 0, 255);
         }
@@ -81,21 +77,168 @@
             white-space: nowrap;
         }
 
+        
+        .right-section img {
+            margin-top: 80px;
+            max-width: 400px; 
+            max-height: 400x; 
+            border-radius: 100%;
+            box-shadow: 0px 0px 9px 4px #bb0eff;
+            animation: glow 1.5s linear infinite alternate;
+        }
+
+        @keyframes glow{
+            to {
+                box-shadow: 0px 0px 30px 20px #8d0283;
+            }
+        }
+
+        /* SECOND SECTION */
         .second{
             max-width: 80vw;
             margin: auto;
+            height: 80vh;
         }
 
+        .second .text-gray{
+            color: rgb(208, 0, 255);
+        }
         .second h1{
             font-size: 3rem;
-            margin: 10px 0;
-        }
-        .my_image img {
-            margin: 30px 0;;
-            max-width: 300px; 
-            max-height: 400x; 
-            border-radius: 100%;
             
+        }
+
+        /* .second .box{
+            background : white;
+            width: 2px;
+            height: 80vh;
+            margin: 50px 20px;
+        } */
+        :root {
+        --primary-color: #212121;
+        --background-color: #111;
+        --font: sans-serif;
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        
+        /* Timeline Container */
+        .timeline {
+        background:rgb(69, 1, 69);
+        margin: 20px auto;
+        padding: 20px;
+        }
+
+        /* Card container */
+        .card {
+        position: relative;
+        max-width: 500px;
+        }
+
+        /* setting padding based on even or odd */
+        .card:nth-child(odd) {
+        padding: 30px 0 30px 30px;
+        }
+        .card:nth-child(even) {
+        padding: 30px 30px 30px 0;
+        }
+        /* Global ::before */
+     
+        .card::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        border: 5px solid rgb(226, 121, 255);
+        }
+
+        /* Setting the border of top, bottom, left */
+        .card:nth-child(odd)::before {
+        left: 0px;
+        top: -4.5px;
+        bottom: -4.5px;
+        border-width: 5px 0 5px 5px;
+        border-radius: 50px 0 0 50px;
+        }
+
+        /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+        @media only screen and (max-width: 400px) {
+        .card:nth-child(odd)::before {
+            top: -5px;
+            bottom: -5px;
+        }
+        }
+
+        /* Setting the border of top, bottom, right */
+        .card:nth-child(even)::before {
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-width: 5px 5px 5px 0;
+        border-radius: 0 50px 50px 0;
+        }
+
+        /* Removing the border if it is the first card */
+        .card:first-child::before {
+        border-top: 0;
+        border-top-left-radius: 0;
+        }
+
+        /* Removing the border if it is the last card  and it's odd */
+        .card:last-child:nth-child(odd)::before {
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        }
+
+        /* Removing the border if it is the last card  and it's even */
+        .card:last-child:nth-child(even)::before {
+        border-bottom: 0;
+        border-bottom-right-radius: 0;
+        }
+
+        /* Information about the timeline */
+        .info {
+            display: flex;
+            flex-direction: column;
+            background: rgb(29, 1, 42);
+            color: rgb(230, 161, 255);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: left; /* Add this property */
+        }
+
+        /* Title of the card */
+        .title {
+            color: #ff790b;
+            position: relative;
+        }
+
+        /* Timeline dot  */
+        .title::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border: 3px solid orangered;
+        border-radius: 999px;
+        }
+
+        /* text right if the card is even  */
+        .card:nth-child(even) > .info > .title {
+        text-align: right;
+        }
+
+        /* setting dot to the left if the card is odd */
+        .card:nth-child(odd) > .info > .title::before {
+        left: -45px;
+        }
+
+        /* setting dot to the right if the card is odd */
+        .card:nth-child(even) > .info > .title::before {
+        right: -45px;
         }
 
 
@@ -126,13 +269,35 @@
                 <span id="element"></span>
             </div>
             <div class="right-section">
-                <img src="./images/PngItem_1127587.png" alt="">
+                <div><img src="./images/rayyan.jpg" alt=""></div>
             </div>
         </section>
 
         <section class="second">
-            <h1>About Me</h1>
-            <div class="my_image"><img src="./images/rayyan.jpg" alt=""></div>
+            <span class="text-gray">What I have done so far...</span>
+            <h1>Education</h1>
+            <div class="timeline">
+                <div class="outer">
+                  <div class="card">
+                    <div class="info">
+                      <h3 class="title">B.Tech CSE with Specialization in AI & ML</h3>
+                      <p><b>Vellore Institute of Technology,Chennai</b></p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="info">
+                      <h3 class="title"> Higher School Education</h3>
+                      <p ><b>Velankkanni Public School, Kodungaiyur</b></p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="info">
+                      <h3 class="title">High School</h3>
+                      <p><b>Sufa Matriculation Higher Secondary School, Kodungaiyur</b></p>
+                    </div>
+                  </div>
+
+            </div>
         </section>
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
