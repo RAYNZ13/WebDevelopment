@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
         }
+        
         body{
             background-color: rgb(29, 1, 42);
             color: white;
@@ -36,6 +37,7 @@
         nav ul li a{
             text-decoration: none;
             color: white;
+            font-size: 1.5rem;
         }
         nav ul li a:hover{
             color: #ffffff;
@@ -43,7 +45,7 @@
             box-shadow: 0 0 50px #cd2aff;
             border: 5px solid #d712ff;
             border-radius: 20px;
-            font-size: 1.2rem;
+            font-size: 2rem;
         }
         .left{
             font-size: 2rem;
@@ -64,9 +66,9 @@
         .violet{
             color: rgb(208, 0, 255);
         }
-        .interest{
+        /* .interest{
             white-space: nowrap;
-        }
+        } */
         #element{
             background-color: rgb(208, 0, 255); 
             border-radius: 25px;
@@ -94,43 +96,45 @@
         }
 
         /* SECOND SECTION */
-        .second{
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
+
 
         .second .text-gray{
             color: rgb(208, 0, 255);
+            margin-left: 10%;
         }
         .second h1{
             font-size: 3rem;
-            
+            margin-left: 10%
         }
 
-        /* .second .box{
-            background : white;
-            width: 2px;
-            height: 80vh;
-            margin: 50px 20px;
-        } */
-        :root {
-        --primary-color: #212121;
-        --background-color: #111;
-        --font: sans-serif;
-        }
+.second-main {
+    background: rgb(69, 1, 69);
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
 
-        * {
-        margin: 0;
-        padding: 0;
-        }
-        
-        /* Timeline Container */
-        .timeline {
-        background:rgb(69, 1, 69);
-        margin: 20px auto;
-        padding: 20px;
-        }
+.second-left {
+    background: rgb(102, 0, 102);
+    margin: 30px;
+    max-width: 50%;
+    padding: 30px;
+    margin-left: 150px;
+}
+
+.second-right {
+    /* Add these properties to position it to the right */
+    flex: 1;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+}
+
+.second-right img {
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 150px;
+}
 
         /* Card container */
         .card {
@@ -241,6 +245,7 @@
         right: -45px;
         }
 
+        
 
     </style>
 </head>
@@ -264,7 +269,7 @@
         <section class="first">
             <div class="left-section">
                 Hi, It's me <span class="violet">Rayyan</span>  
-                <div class="interest">and I am a passionate</div>
+                <div class="interest">I am a passionate</div>
                 <!-- <div class="role">Web Developer</div> -->
                 <span id="element"></span>
             </div>
@@ -276,27 +281,32 @@
         <section class="second">
             <span class="text-gray">What I have done so far...</span>
             <h1>Education</h1>
-            <div class="timeline">
-                <div class="outer">
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title">B.Tech CSE with Specialization in AI & ML</h3>
-                      <p><b>Vellore Institute of Technology,Chennai</b></p>
+            <div class="second-main">
+                <div class="second-left">
+                    <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                        <h3 class="title">B.Tech CSE with Specialization in AI & ML</h3>
+                        <p><b>Vellore Institute of Technology,Chennai</b></p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title"> Higher School Education</h3>
-                      <p ><b>Velankkanni Public School, Kodungaiyur</b></p>
+                    <div class="card">
+                        <div class="info">
+                        <h3 class="title"> Higher School Education</h3>
+                        <p><b>Velankkanni Public School, Kodungaiyur</b></p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title">High School</h3>
-                      <p><b>Sufa Matriculation Higher Secondary School, Kodungaiyur</b></p>
+                    <div class="card">
+                        <div class="info">
+                        <h3 class="title">High School</h3>
+                        <p><b>Sufa Matriculation Higher Secondary School, Kodungaiyur</b></p>
+                        </div>
                     </div>
-                  </div>
 
+                </div>
+            </div>
+            <div class="second-right">
+                <img src="./images/pngwing.com (1).png" alt="">
             </div>
         </section>
     </main>
