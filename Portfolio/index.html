@@ -340,7 +340,6 @@
 
         /* FOURTH SECTION */
         .fourth{
-            height: 100vh;
             padding-top: 10px;
         }
         .fourth > h1{
@@ -353,20 +352,149 @@
             justify-content: space-between;
             padding: 20px;
             background: #42013d;
-            height: 40vh;
+            height: 50vh;
         }
 
         .card-1, .card-2, .card-3{
             border: 1px solid #ccc;
             border-radius: 8px;
-            padding: 20px;
-            width: 30%; /* Adjust the width as needed */
-            box-shadow: 0 2px 4px red;
-            background: #fff; /* Add a background color to the cards */
-            color: #000; /* Set the text color */
-            margin: 10px; /* Add some margin for spacing between the cards */
+            padding: 0px 20px 20px 20px;
+            width: 30%; 
+            height: 300px;
+            box-shadow: 3px 3px 2px #e564ff;
+            background: #fff; 
+            margin: 10px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: rgb(29, 1, 42);
         }
 
+        .card-1 img {
+            align-self: center;
+            max-width: 50%; 
+        }
+
+        .card-1 h5 {
+            font-size: 1.5rem;
+            color: #ef9eff;
+        }
+
+        .card-1 a.stretched-link {
+            margin-top: 30px;
+        }
+        .card-2 img {
+            align-self: center;
+            max-width: 30%; 
+        }
+        .card-2 h5 {
+            font-size: 1.2rem;
+            color: #ef9eff;
+        }
+        .card-3 img {
+            align-self: center;
+            max-width: 30%; 
+            margin: 15px;
+        }
+        .card-3 h5 {
+            font-size: 1.5rem;
+            color: #ef9eff;
+        }
+
+        /* FOOTER SECTION */
+        footer {
+            background-color: #42013d; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        footer .max-w-screen-xl {
+            max-width: 1280px;
+            margin: auto;
+            padding: 16px; 
+        }
+
+        a.flex.items-center {
+            text-decoration: none; 
+            display: flex; 
+            align-items: center;
+            margin-bottom: 4px; 
+        }
+
+        a.flex.items-center img {
+            height: 8px; 
+            margin-right: 3px; 
+        }
+
+        a.flex.items-center span {
+            font-size: 2rem; 
+            font-weight: 600; 
+            white-space: nowrap; 
+            color: white;
+            margin-top: 12px;
+        }
+
+        .socials{
+            background: rgb(116, 25, 25);
+            height: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .flex.items-center span:hover{
+            color: #e564ff;
+        }
+        footer .flex.items-center.mb-4 img {
+            height: 50px; 
+            width: 50px;
+            margin-right: 8px; 
+        }
+
+        footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 12px; 
+        }
+
+        footer ul li {
+            list-style: none;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #e564ff; 
+            margin-right: 16px; /
+            transition: color 0.3s ease; 
+        }
+
+        footer ul li a:hover {
+            color: white;
+        }
+
+        footer hr {
+            margin: 24px auto; /* Adjust the margin as needed */
+            border: 1px solid #e5e7eb; /* Set your border color */
+        }
+
+        footer span.block {
+            display: block;
+            text-align: center;
+            font-size: 14px; /* Adjust the font size as needed */
+            color: #e564ff ; /* Set your text color */
+        }
+
+        footer span.block a {
+            color: #e564ff; /* Set your link color */
+            transition: color 0.3s ease; 
+        }
+
+        footer span.block a:hover {
+            color: white; /* Set your link hover color */
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -390,7 +518,6 @@
             <div class="left-section">
                 Hi, It's me <span class="violet">Rayyan</span>  
                 <div class="interest">I am a passionate</div>
-                <!-- <div class="role">Web Developer</div> -->
                 <span id="element"></span>
                 <div class="button">        
                     <button class="resume-btn">Down load Resume</buttons>
@@ -475,33 +602,46 @@
             <p class="text-gray">My works so far...</p>
             <div class="fourth-main">
                 <div class="card-1">
-                    <img src="..." class="mr-3" alt="...">
+                    <img src="./images/mahk_logo-01.png" class="mr-3" alt="...">
                     <div class="media-body">
-                        <h5 class="mt-0">Media with stretched link</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                        <a href="#" class="stretched-link">Go somewhere</a>
+                        <h5 class="mt-0">Designs of MAHK</h5>
+                        <p>Logos and poster work created for Masjide Ahle Hadees-Kodungaiyur.. </p>
+                        <br>
+                        <button>Tap to view -></button>
                     </div>
                 </div>
 
                 <div class="card-2">
-                    <img src="..." class="mr-3" alt="...">
+                    <img src="./images/mic logo color.png" class="mr-3" alt="...">
                     <div class="media-body">
-                        <h5 class="mt-0">Media with stretched link</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                        <a href="#" class="stretched-link">Go somewhere</a>
+                        <h5 class="mt-0">Microsoft Innovations Club</h5>
+                        <p>club T-Shirt, event posters, youtube thumnails etc...</p>
+                        <br>
+                        <button>Tap to view -></button>
                     </div>
                 </div>
 
                 <div class="card-3">
-                    <img src="..." class="mr-3" alt="...">
+                    <img src="./images/RA_logo-01.png" class="mr-3" alt="...">
                     <div class="media-body">
-                        <h5 class="mt-0">Media with stretched link</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                        <a href="#" class="stretched-link">Go somewhere</a>
+                        <h5 class="mt-0">Personal tryouts ..</h5>
+                        <p>Printable custom posters, flyers and Ad design work..</p>
+                        <br>
+                        <button>Tap to view -></button>
                     </div>
                 </div>
             </div>            
         </section>
+        
+        <div class="socials">
+            <h1>Shaik Rayyan Ahmed</h1>
+            <div class="social-container">
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/raynz_13/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/RAYNZ132"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="www.linkedin.com/in/rayyan-ahmed-1b1b68243"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+        </div>
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
@@ -513,4 +653,29 @@
     </script>
     
 </body>
+    
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                <img src="./images/RA_logo-01.png" class="h-8 mr-3" alt="RALogo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Rayyan</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Rayyan™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
 </html>
