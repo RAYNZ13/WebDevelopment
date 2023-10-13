@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
     <style>
         *{
             margin: 0;
@@ -108,37 +109,37 @@
             margin-left: 10%
         }
 
-.second-main {
-    background: rgb(69, 1, 69);
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-}
+        .second-main {
+            background: rgb(69, 1, 69);
+            display: flex;
+            justify-content: space-around;
+            align-content: space-around;
+        }
 
-.second-left {
-    background: rgb(102, 0, 102);
-    margin: 30px;
-    max-width: 50%;
-    padding: 30px;
-    margin-left: 150px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 9px 4px #e564ff;
-    animation: border-flicker 1.5s linear infinite ;
-}
+        .second-left {
+            background: rgb(102, 0, 102);
+            margin: 30px;
+            max-width: 50%;
+            padding: 30px;
+            margin-left: 150px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 9px 4px #e564ff;
+            animation: border-flicker 1.5s linear infinite ;
+        }
 
-.second-right {
-    /* Add these properties to position it to the right */
-    flex: 1;
-    display: flex;
-    /* justify-content: flex-end; */
-    align-items: center;
-}
+        .second-right {
+            /* Add these properties to position it to the right */
+            flex: 1;
+            display: flex;
+            /* justify-content: flex-end; */
+            align-items: center;
+        }
 
-.second-right img {
-    max-width: 500px;
-    max-height: 500px;
-    margin-left: 150px;
-}
+        .second-right img {
+            max-width: 500px;
+            max-height: 500px;
+            margin-left: 150px;
+        }
 
         /* Card container */
         .card {
@@ -435,12 +436,6 @@
             margin-top: 12px;
         }
 
-        .socials{
-            background: rgb(116, 25, 25);
-            height: 150px;
-            display: flex;
-            justify-content: center;
-        }
 
         footer .flex.items-center span:hover{
             color: #e564ff;
@@ -493,8 +488,71 @@
         footer span.block a:hover {
             color: white; /* Set your link hover color */
         }
-        
-        
+
+        /* SOCIALS */
+        .socials {
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .socials h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .social-container ul{
+        top: 50%;
+        left: 50%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .social-container ul li{
+        list-style: none;
+        margin: 0 15px;
+    }
+
+    .social-container ul li .fab{
+        font-size: 30px;
+        line-height: 60px;
+        transition: .3s;
+        color: #8d0283;
+    }
+
+    .social-container ul li .fab:hover{
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    .social-container ul li a{
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #e564ff;
+        text-align: center;
+        transition: .6s;
+        box-shadow: 0 5px 4px rgba(0,0,0,.5);
+
+    }
+
+    .social-conatiner ul li a:hover{
+        transform: translateY(-5px);
+        background-color: #8d0283;
+    }
+
+    .social-container ul li a:hover{
+        background-color: #8d0283;
+    }
+
     </style>
 </head>
 <body>
@@ -637,10 +695,14 @@
             <h1>Shaik Rayyan Ahmed</h1>
             <div class="social-container">
                 <ul class="social-icons">
-                    <li><a href="https://www.instagram.com/raynz_13/"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://twitter.com/RAYNZ132"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="www.linkedin.com/in/rayyan-ahmed-1b1b68243"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/RAYNZ13" target="_blank"><i class="fab fa-github"></i></a></li>
+                    </i></a></li>
+                    <li><a href="https://www.instagram.com/raynz_13/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/RAYNZ132" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="www.linkedin.com/in/rayyan-ahmed-1b1b68243" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    
                 </ul>
+            </div>
         </div>
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
@@ -650,6 +712,8 @@
       strings: ['Web Developer', 'Graphic Designer', 'Freelancer'],
       typeSpeed: 50,
     });
+
+    
     </script>
     
 </body>
