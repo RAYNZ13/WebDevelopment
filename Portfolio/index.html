@@ -8,578 +8,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/RA_logo-01.png" type="RA/icon">
+    <link rel="stylesheet" href="style.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
         
-        body{
-            background-color: rgb(29, 1, 42);
-            color: white;
-            font-family: 'Poppins',sans-serif;
-        }
-
-        nav{
-            display: flex;
-            justify-content: space-around ;
-            align-items: center;
-            height: 90px;
-            background-color: rgb(69, 1, 69);
-            /* box-shadow: 5px 5px 10px #4f0553; */
-        }
-        nav ul{
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li{
-            list-style: none;
-            margin: 0 23px;
-        }
-        nav ul li a{
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-        }
-        nav ul li a:hover{
-            color: #ffffff;
-            background: #d712ff;
-            box-shadow: 0 0 50px #cd2aff;
-            border: 5px solid #d712ff;
-            border-radius: 20px;
-            font-size: 1.4rem;
-        }
-        .left{
-            font-size: 2rem;
-        }
-        .first{
-            display: flex;
-            justify-content: space-around;
-            /* margin: 80px 0; */
-            align-items: center;
-        }
-        .first > div{
-            width: 30%;
-        }
-        .left-section{
-            font-size: 3rem;
-            margin: 30px 0;
-        }
-        .violet{
-            color: rgb(208, 0, 255);
-        }
-        /* .interest{
-            white-space: nowrap;
-        } */
-        #element{
-            background-color: rgb(208, 0, 255); 
-            border-radius: 25px;
-            margin-top: 10px;
-            /* margin-right: 80px; */
-            padding-left: 10px;
-            padding-right: 10px;
-            white-space: nowrap;
-        }
-
-        
-        .right-section img {
-            margin-top: 80px;
-            max-width: 400px; 
-            max-height: 400x; 
-            border-radius: 100%;
-            box-shadow: 0px 0px 9px 4px #bb0eff;
-            animation: glow 1.5s linear infinite alternate;
-        }
-
-        @keyframes glow{
-            to {
-                box-shadow: 0px 0px 30px 20px #8d0283;
-            }
-        }
-
-        /* SECOND SECTION */
-
-
-        .text-gray{
-            color: rgb(208, 0, 255);
-            margin-left: 10%;
-        }
-        .second h1{
-            font-size: 3rem;
-            margin-left: 10%
-        }
-
-        .second-main {
-            background: rgb(69, 1, 69);
-            display: flex;
-            justify-content: space-around;
-            align-content: space-around;
-        }
-
-        .second-left {
-            background: rgb(102, 0, 102);
-            margin: 30px;
-            max-width: 50%;
-            padding: 30px;
-            margin-left: 150px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 9px 4px #e564ff;
-            animation: border-flicker 1.5s linear infinite ;
-        }
-
-        .second-right {
-            /* Add these properties to position it to the right */
-            flex: 1;
-            display: flex;
-            /* justify-content: flex-end; */
-            align-items: center;
-        }
-
-        .second-right img {
-            max-width: 500px;
-            max-height: 500px;
-            margin-left: 150px;
-        }
-
-        /* Card container */
-        .card {
-        position: relative;
-        max-width: 500px;
-        }
-
-        /* setting padding based on even or odd */
-        .card:nth-child(odd) {
-        padding: 30px 0 30px 30px;
-        }
-        .card:nth-child(even) {
-        padding: 30px 30px 30px 0;
-        }
-        /* Global ::before */
-     
-        .card::before {
-        content: "";
-        position: absolute;
-        width: 50%;
-        border: 5px solid rgb(226, 121, 255);
-        }
-
-        /* Setting the border of top, bottom, left */
-        .card:nth-child(odd)::before {
-        left: 0px;
-        top: -4.5px;
-        bottom: -4.5px;
-        border-width: 5px 0 5px 5px;
-        border-radius: 50px 0 0 50px;
-        }
-
-        /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
-        @media only screen and (max-width: 400px) {
-        .card:nth-child(odd)::before {
-            top: -5px;
-            bottom: -5px;
-        }
-        }
-
-        /* Setting the border of top, bottom, right */
-        .card:nth-child(even)::before {
-        right: 0;
-        top: 0;
-        bottom: 0;
-        border-width: 5px 5px 5px 0;
-        border-radius: 0 50px 50px 0;
-        }
-
-        /* Removing the border if it is the first card */
-        .card:first-child::before {
-        border-top: 0;
-        border-top-left-radius: 0;
-        }
-
-        /* Removing the border if it is the last card  and it's odd */
-        .card:last-child:nth-child(odd)::before {
-        border-bottom: 0;
-        border-bottom-left-radius: 0;
-        }
-
-        /* Removing the border if it is the last card  and it's even */
-        .card:last-child:nth-child(even)::before {
-        border-bottom: 0;
-        border-bottom-right-radius: 0;
-        }
-
-        /* Information about the timeline */
-        .info {
-            display: flex;
-            flex-direction: column;
-            background: rgb(29, 1, 42);
-            color: rgb(230, 161, 255);
-            border-radius: 10px;
-            padding: 10px;
-            text-align: left; /* Add this property */
-        }
-
-        /* Title of the card */
-        .title {
-            color: #ff790b;
-            position: relative;
-        }
-
-        /* Timeline dot  */
-        .title::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: white;
-        border: 3px solid orangered;
-        border-radius: 999px;
-        }
-
-        /* text right if the card is even  */
-        .card:nth-child(even) > .info > .title {
-        text-align: right;
-        }
-
-        /* setting dot to the left if the card is odd */
-        .card:nth-child(odd) > .info > .title::before {
-        left: -45px;
-        }
-
-        /* setting dot to the right if the card is odd */
-        .card:nth-child(even) > .info > .title::before {
-        right: -45px;
-        }
-
-        button {
-            position: relative;
-            height: 60px;
-            width: 200px;
-            border: none;
-            outline: none;
-            color: white;
-            background: linear-gradient(45deg, #d712ff,#42013d);
-            cursor: pointer;
-            border-radius: 10px;
-            font-size: 18px;
-            font-family: "Poppins";
-            }
-            button:before {
-            position: absolute;
-            content: "";
-            top: -2px;
-            left: -2px;
-            height: calc(100% + 4px);
-            width: calc(100% + 4px);
-            border-radius: 5px;
-            z-index: -1;
-            opacity: 0;
-            filter: blur(5px);
-            background: linear-gradient(45deg, #e564ff,#ff00ee, purple, #ff00ee, #e564ff);
-            background-size: 400%;
-            transition: opacity 0.3s ease-in-out;
-            animation: animate 20s linear infinite;
-            }
-            button:hover:before {
-            opacity: 1;
-            }
-            button:hover:active {
-            background: none;
-            }
-            button:hover:active:before {
-            filter: blur(2px);
-            }
-            @keyframes animate {
-            0% {
-                background-position: 0 0;
-            }
-            50% {
-                background-position: 400% 0;
-            }
-            100% {
-                background-position: 0 0;
-            }
-        }
-
-        .git-btn{
-            margin-left: 20px;
-        }
-
-        .third h1{
-            font-size: 3rem;
-            margin:20px 0 0 10%;
-        }
-        .card-left{
-            margin-left:30% 
-        }
-        .secondCard-left{
-            margin-left: 74%;
-        }
-        .sCard-info{
-            margin-left: 77%
-        }
-        .third-main{
-            display: flex;
-            /* height: 80vh; */
-            margin-bottom: 50px;
-        }
-        .thirdR-image img{
-            max-width: 500px;
-            height: 430px;
-            margin-left: 150px;
-        }
-        .timeline{
-            width: 35%;
-            height: 65%;
-            padding: 30px;
-            margin-left: 150px;
-            margin-top: 15px;
-            background:rgb(102, 0, 102);
-            border-radius: 15px;
-            box-shadow: 0px 0px 9px 4px #e564ff;
-            animation: border-flicker 1.5s linear infinite ;
-        }
-
-        /* FOURTH SECTION */
-        .fourth{
-            padding-top: 10px;
-        }
-        .fourth > h1{
-            margin-top: 10px;
-            font-size: 3rem;
-            margin:20px 0 0 10%;
-        }
-        .fourth-main {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            background: #42013d;
-            height: 50vh;
-        }
-
-        .card-1, .card-2, .card-3{
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 0px 20px 20px 20px;
-            width: 30%; 
-            height: 300px;
-            box-shadow: 3px 3px 2px #e564ff;
-            background: #fff; 
-            margin: 10px; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background: rgb(29, 1, 42);
-        }
-
-        .card-1 img {
-            align-self: center;
-            max-width: 50%; 
-        }
-
-        .card-1 h5 {
-            font-size: 1.5rem;
-            color: #ef9eff;
-        }
-
-        .card-1 a.stretched-link {
-            margin-top: 30px;
-        }
-        .card-2 img {
-            align-self: center;
-            max-width: 30%; 
-        }
-        .card-2 h5 {
-            font-size: 1.2rem;
-            color: #ef9eff;
-        }
-        .card-3 img {
-            align-self: center;
-            max-width: 30%; 
-            margin: 15px;
-        }
-        .card-3 h5 {
-            font-size: 1.5rem;
-            color: #ef9eff;
-        }
-
-        /* FOOTER SECTION */
-        footer {
-            background-color: #42013d; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        
-        footer .max-w-screen-xl {
-            max-width: 1280px;
-            margin: auto;
-            padding: 16px; 
-        }
-
-        a.flex.items-center {
-            text-decoration: none; 
-            display: flex; 
-            align-items: center;
-            margin-bottom: 4px; 
-        }
-
-        a.flex.items-center img {
-            height: 8px; 
-            margin-right: 3px; 
-        }
-
-        a.flex.items-center span {
-            font-size: 2rem; 
-            font-weight: 600; 
-            white-space: nowrap; 
-            color: white;
-            margin-top: 12px;
-        }
-
-
-        footer .flex.items-center span:hover{
-            color: #e564ff;
-        }
-        footer .flex.items-center.mb-4 img {
-            height: 50px; 
-            width: 50px;
-            margin-right: 8px; 
-        }
-
-        footer ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 12px; 
-        }
-
-        footer ul li {
-            list-style: none;
-        }
-
-        footer ul li a {
-            text-decoration: none;
-            color: #e564ff; 
-            margin-right: 16px; /
-            transition: color 0.3s ease; 
-        }
-
-        footer ul li a:hover {
-            color: white;
-        }
-
-        footer hr {
-            margin: 24px auto; /* Adjust the margin as needed */
-            border: 1px solid #e5e7eb; /* Set your border color */
-        }
-
-        footer span.block {
-            display: block;
-            text-align: center;
-            font-size: 14px; /* Adjust the font size as needed */
-            color: #e564ff ; /* Set your text color */
-        }
-
-        footer span.block a {
-            color: #e564ff; /* Set your link color */
-            transition: color 0.3s ease; 
-        }
-
-        footer span.block a:hover {
-            color: white; /* Set your link hover color */
-        }
-
-        /* SOCIALS */
-        .socials {
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .socials h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: white;
-    }
-
-    .social-container ul{
-        top: 50%;
-        left: 50%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-    }
-
-    .social-container ul li{
-        list-style: none;
-        margin: 0 15px;
-    }
-
-    .social-container ul li .fab{
-        font-size: 30px;
-        line-height: 60px;
-        transition: .3s;
-        color: #8d0283;
-    }
-
-    .social-container ul li .fab:hover{
-        color: #fff;
-        transform: translateY(-5px);
-    }
-
-    .social-container ul li a{
-        position: relative;
-        display: block;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #e564ff;
-        text-align: center;
-        transition: .6s;
-        box-shadow: 0 5px 4px rgba(0,0,0,.5);
-
-    }
-
-    .social-conatiner ul li a:hover{
-        transform: translateY(-5px);
-        background-color: #8d0283;
-    }
-
-    .social-container ul li a:hover{
-        background-color: #8d0283;
-    }
 
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="left">Rayyan's Portfolio</div>
+            <div class="left">
+                <img class="logo" src="./images/RA_logo-01.png" alt="">
+                Rayyan's Portfolio
+            </div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contacts</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#edu">Service</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contacts</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     
     <main>
-        <section class="first">
-            <div class="left-section">
+        <section class="first" id="home">
+            <div class="left-section" >
                 Hi, It's me <span class="violet">Rayyan</span>  
                 <div class="interest">I am a passionate</div>
                 <span id="element"></span>
                 <div class="button">        
-                    <button class="resume-btn">Down load Resume</buttons>
-                    <button class="git-btn">Visit Github</buttons>
+                    <button class="resume-btn"><a href="https://drive.google.com/file/d/1FuFYgC0mNldzytfzBwyAgl0WQAtEMkyY/view?usp=drive_link" target="_blank">Download Resume</a></buttons>
+                    <button class="git-btn"> <a href="https://github.com/RAYNZ13" target="_blank">Visit Github</a></buttons>
                 </div>
             </div>
 
@@ -590,7 +53,7 @@
             
         </section>
 
-        <section class="second">
+        <section class="second" id="about">
             <span class="text-gray">My Journey</span>
             <h1>Education</h1>
             <div class="second-main">
@@ -622,7 +85,7 @@
             </div>
         </section>
 
-        <section class="third">
+        <section class="third" id="edu">
             <h1>Experince</h1>
             <span class="text-gray">What I have done so far...</span>
 
@@ -655,12 +118,12 @@
             </div>
         </section>
         
-        <section class="fourth">
+        <section class="fourth" id="project">
             <h1>Portfolio</h1>
             <p class="text-gray">My works so far...</p>
             <div class="fourth-main">
                 <div class="card-1">
-                    <img src="./images/mahk_logo-01.png" class="mr-3" alt="...">
+                    <img src="./images/mahk_logo-01-01.png" class="mr-3" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0">Designs of MAHK</h5>
                         <p>Logos and poster work created for Masjide Ahle Hadees-Kodungaiyur.. </p>
@@ -691,7 +154,7 @@
             </div>            
         </section>
         
-        <div class="socials">
+        <div class="socials" id="contact">
             <h1>Shaik Rayyan Ahmed</h1>
             <div class="social-container">
                 <ul class="social-icons">
@@ -699,7 +162,7 @@
                     </i></a></li>
                     <li><a href="https://www.instagram.com/raynz_13/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com/RAYNZ132" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="www.linkedin.com/in/rayyan-ahmed-1b1b68243" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://linkedin.com/in/rayyan-ahmed-1b1b68243" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     
                 </ul>
             </div>
@@ -710,7 +173,7 @@
     <script>
     var typed = new Typed('#element', {
       strings: ['Web Developer', 'Graphic Designer', 'Freelancer'],
-      typeSpeed: 50,
+      typeSpeed: 40,
     });
 
     

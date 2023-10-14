@@ -1,0 +1,27 @@
+.topnav{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color : red;
+}
+
+.primary-nav-row{
+    max-width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+
+}
+
+.ast-builder-row{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-column-gap: 20px;
+    overflow-wrap: anywhere;
+}
+
+.primary-section{
+    flex-wrap: nowrap;
+    display: flex;
+}
