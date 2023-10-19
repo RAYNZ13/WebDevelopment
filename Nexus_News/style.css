@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
 }
 
 nav {
-    background-color: whitesmoke; 
-    color: #54064f; 
+    background-color: whitesmoke;
+    color: #54064f;
     padding: 10px 0;
-    box-shadow:2px 2px px #430251;
+    box-shadow: 2px 2px 2px #430251;
 }
 
 .main-nav {
@@ -22,7 +22,7 @@ nav a {
 }
 
 nav img {
-    max-width: 100px; 
+    max-width: 100px;
     height: auto;
 }
 
@@ -34,11 +34,11 @@ nav img {
 }
 
 .nav-items {
-    margin-right: 20px; 
+    margin-right: 20px;
     cursor: pointer;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     transition: all 0.4s ease;
     color: #ffffff;
     background: #430251;
@@ -55,42 +55,42 @@ nav ul li:hover{
     padding: 5px;
     border: 2px solid #8806a5;
     border-radius: 4px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .search-btn {
-    background-color: #8806a5; 
-    color: #ffffff; 
+    background-color: #8806a5;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
-.container{
+.container {
     max-width: 1180px;
     margin-inline: auto;
     overflow: hidden;
 }
 
-.flex{
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-main{
+main {
     padding-block: 20px;
 }
 
-.card-container{
+.card-container {
     justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
     row-gap: 20px;
 }
 
-.card{
+.card {
     width: 360px;
     min-height: 400px;
     border: 1px solid #430251;
@@ -102,30 +102,32 @@ main{
     transition: all 0.3s ease;
 }
 
-.card .card-content #news-title{
+.card .card-content #news-title {
     font-size: 1.3rem;
-    color:#430251;
+    color: #430251;
 }
-.card:hover{
+
+.card:hover {
     box-shadow: 1px 1px 8px #430251;
     background: #ebb4fa;
     transform: translateY(-2px);
 }
 
-.card-header img{
+.card-header img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-.card-content{
+.card-content {
     padding: 12px;
 }
+
 .source {
     margin-block: 12px;
 }
 
-.nav-items.active{
+.nav-items.active {
     background-color: #8806a5;
     color: #ffffff;
     border-radius: 10px;
@@ -136,4 +138,42 @@ button.search-btn:active {
     background: #430251;
     color: #ffffff;
     transition: all 0.3s ease-in;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 0 10px;
+    }
+
+    nav img {
+        max-width: 80px;
+    }
+
+    .nav-items {
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .search-bar {
+        flex-direction: column; /* Stack input and button vertically */
+    }
+
+    .news-input {
+        width: 100%; /* Make the input full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add some margin below the input */
+    }
+
+    .search-btn {
+        width: 100%; /* Make the button full width */
+    }
+
+    .card {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .card .card-content #news-title {
+        font-size: 1.1rem;
+    }
 }
