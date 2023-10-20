@@ -1,20 +1,28 @@
+/* Base styles for all screens */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
 }
 
 nav {
     background-color: whitesmoke;
     color: #54064f;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     box-shadow: 2px 2px 2px #430251;
 }
 
 .main-nav {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
@@ -22,7 +30,7 @@ nav a {
 }
 
 nav img {
-    max-width: 100px;
+    max-width: 85px;
     height: auto;
 }
 
@@ -36,6 +44,13 @@ nav img {
 .nav-items {
     margin-right: 20px;
     cursor: pointer;
+}
+
+/* Adjust navigation styles for smaller screens */
+@media (max-width: 768px) {
+    .nav-items {
+        margin-right: 10px;
+    }
 }
 
 nav ul li:hover {
@@ -71,6 +86,7 @@ nav ul li:hover {
     max-width: 1180px;
     margin-inline: auto;
     overflow: hidden;
+    padding: 20px;
 }
 
 .flex {
@@ -84,27 +100,28 @@ main {
 }
 
 .card-container {
-    justify-content: space-between;
-    align-items: start;
+    display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .card {
-    width: 360px;
-    min-height: 400px;
+    flex: 0 1 calc(33.33% - 20px);
     border: 1px solid #430251;
     box-shadow: 0 0 4px #430251;
     background: rgb(255, 221, 255);
     border-radius: 4px;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.card .card-content #news-title {
-    font-size: 1.3rem;
-    color: #430251;
+/* Adjust card styles for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(50% - 20px);
+    }
 }
 
 .card:hover {
@@ -113,18 +130,22 @@ main {
     transform: translateY(-2px);
 }
 
-.card-header img {
+.card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: auto;
 }
 
 .card-content {
     padding: 12px;
 }
 
+#news-title {
+    font-size: 1.3rem;
+    color: #430251;
+}
+
 .source {
-    margin-block: 12px;
+    margin-top: 12px;
 }
 
 .nav-items.active {
@@ -140,40 +161,74 @@ button.search-btn:active {
     transition: all 0.3s ease-in;
 }
 
-@media (max-width: 768px) {
-    .main-nav {
-        padding: 0 10px;
-    }
+.footer-main {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
 
-    nav img {
-        max-width: 80px;
-    }
+.ftr-img {
+    max-width: 150px;
+    height: auto;
+}
 
-    .nav-items {
-        margin-right: 10px;
-        font-size: 0.9rem;
-    }
+.main-nav a {
+    color: #430251;
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: all 0.3s ease-in;
+    background: linear-gradient(
+        to right,
+        #8b04a9 20%,
+        #430251 30%,
+        #83057a 70%,
+        #af3dc9 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 10s ease-in-out infinite alternate;
+}
 
-    .search-bar {
-        flex-direction: column; /* Stack input and button vertically */
-    }
+footer {
+    background-color: whitesmoke;
+    box-shadow: 0px -2px 15px #54064f;
+}
 
-    .news-input {
-        width: 100%; /* Make the input full width */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add some margin below the input */
-    }
+.ftr-link {
 
-    .search-btn {
-        width: 100%; /* Make the button full width */
-    }
+    margin-left: 10px;
+    font-size: 6rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    background: linear-gradient(
+        to right,
+        #8b04a9 20%,
+        #b51fd7 30%,
+        #83057a 70%,
+        #5a036e 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 10s ease-in-out infinite alternate;
+}
 
-    .card {
-        width: 100%;
-        min-height: 300px;
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
     }
-
-    .card .card-content #news-title {
-        font-size: 1.1rem;
+    100% {
+        background-position: 100% 50%;
     }
 }
+
