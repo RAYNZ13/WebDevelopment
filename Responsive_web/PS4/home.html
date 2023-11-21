@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <img src="./Playstation_Img/logo.png" alt="PS_logo">
+            <div id="nav-contents">
+                <h4>Game Controllers</h4>
+                <h4>VR Accessories</h4>
+                <h4>Media Remotes</h4>
+                <h4>Others</h4>
+            </div>
+            <i class="ri-menu-5-line" onclick="toggleMenu()"></i>
+        </div>
+
+        <div id="main-content">
+            <div id="left">
+                <div id="left-bar"></div>
+                <div id="left-content">
+                    <h1>PS4 V2<br>Dualshock 4</h1>
+                    <h5>Wireless Controller for Playstation 4</h5>
+                    <p>(Comptible/Generic)</p>
+                    <h4>$32.50</h4>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div id="right">
+                <img src="./Playstation_Img/controller.png" class="controller" alt="">
+                <div class="color-box"></div>
+                <div id="add-btn">
+                    <img src="./Playstation_Img/add.png" alt="">
+                    <p><small>Add to Cart</small></p>
+                </div>
+            </div>
+        </div>
+        <div id="socials">
+            <img src="./Playstation_Img/fb.png" alt="">
+            <img src="./Playstation_Img/ig.png" alt="">
+            <img src="./Playstation_Img/tw.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        var menuList = document.getElementById("nav-contents");
+        menuList.style.maxHeight = "0px";
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px"){
+                menuList.style.maxHeight = "130px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./eduford_img/logo2-01.png" type="image/x-icon">
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="./eduford_img/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="ri-close-fill" onclick="closemenu()"></i>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="about.html"target="_blank">About</a></li>
+                    <li><a href="course.html"target="_blank">Course</a></li>
+                    <li><a href="blog.html"target="_blank">Blog</a></li>
+                    <li><a href="contact.html"target="_blank">Contact</a></li>
+                </ul>
+            </div>
+            <i class="ri-menu-line" onclick="openmenu()" ></i>
+        </nav>
+
+        <h1 class="certificate">Our Certificate & Online Programs For 2021</h1>
+    </section>
+
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="./eduford_img/certificate.jpg" alt="">
+                <h2>Our Certificate & Online Programs For 2021</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nemo, aspernatur vel consequatur in quis labore odio odit earum, animi assumenda illo blanditiis sapiente perferendis quisquam, dignissimos esse placeat exercitationem. Magnam quas, culpa quos dolore fugiat, adipisci sapiente commodi alias cum sunt, deleniti repellendus placeat atque nisi. Dolor doloremque nobis molestiae sunt adipisci, ipsa enim, iste aspernatur, officiis hic rerum? Ea adipisci corporis dignissimos cupiditate laborum optio incidunt porro neque. <br><br> Ratione nam mollitia accusantium dolor tenetur voluptas qui consequuntur velit nisi laboriosam dolore veritatis quisquam natus totam quidem corporis, deleniti odit enim quas, ab error dolorum earum. Quae cupiditate, laboriosam quod iusto debitis beatae explicabo eveniet odit aliquam labore minus, ratione iure porro ipsa a nostrum maiores id eaque fugit illum ut laudantium voluptatem itaque. Quos labore aut amet voluptates doloribus ex ullam fuga, voluptatum blanditiis sequi enim magnam totam consequatur numquam nobis veritatis rem eligendi velit iste! Numquam tempora doloribus ullam error expedita accusantium quas commodi, illo et minus deserunt ea ipsam a ratione praesentium cum dolorem magni quisquam fugiat maiores quis explicabo minima unde sed. Sapiente provident, enim dignissimos saepe veniam cum, porro vel libero facere adipisci reprehenderit labore optio perspiciatis hic at? Illo unde quia aliquid vero?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus, magnam amet dolores autem esse aliquid laudantium tenetur veniam aliquam perferendis facere porro quam suscipit mollitia nobis voluptas? Dignissimos voluptatum blanditiis dolores, quisquam iure dolorum optio quis nemo fuga repellat? Atque porro temporibus suscipit. Inventore officia a illo, illum similique corporis architecto incidunt repudiandae non numquam id voluptates hic doloribus. Provident aliquam quasi dolor laboriosam dicta voluptatem id quae quo fugit impedit, aliquid magni quia autem totam corrupti expedita architecto illo non necessitatibus incidunt sunt placeat eius asperiores. </p>
+            </div>
+
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Buisness Analytics</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Data Science</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Artificial Intelligence</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Machine Learning</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>AI Robotics</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Journalism</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>AutoCAD</span>
+                    <span>21</span>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <h3>Leave a comment</h3>
+                <form class="comment-form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter Email">
+                    <textarea rows="5" placeholder="Your comment"></textarea>
+                    <button type="submit" class="submit-btn">POST COMMENT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Earum nulla nesciunt, totam corporis amet pariatur.<br> deserunt modi ducimus aperiam impedit rem nam iste. Ad, praesentium?</p>
+        <div class="socials">
+            <a href=""><i class="ri-facebook-fill"></i></a>
+            <a href=""><i class="ri-twitter-x-line"></i></a>
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="ri-linkedin-fill"></i></a>
+        </div>
+        <p>Made with <i class="ri-heart-fill"></i> by <a href="https://github.com/RAYNZ13">RaynZ</a></p>
+    </section>
+
+    <script>
+        var navList = document.getElementById("navLinks");
+
+        function openmenu(){
+            navList.style.right = "0";
+        }
+        function closemenu(){
+            navList.style.right = "-250px";
+        }
+    </script>
+</body>
+</html>

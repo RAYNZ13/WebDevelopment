@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 10vw;
+    margin-top: 2vw;
+}
+
+#nav img{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+#nav #nav-contents{
+    display: flex;
+    gap:3vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#nav #nav-contents h4:hover{
+    color: rgb(216,87,80);
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.ri-menu-5-line{
+    display: none;
+}
+
+#main-content{
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+
+}
+
+#left{
+    width: 50vw;
+    padding: 10vw 5vw;
+    display: flex;
+    gap:2vw;
+
+}
+
+#left-bar{
+    width: 1vw;
+    height: 15vw;
+    background: rgb(255,108,103);
+    background: linear-gradient(0deg, rgba(255,108,103,1) 0%, rgba(255,94,159,1) 100%);    margin-top: 0.9vw;
+}
+
+#left h1{
+    font-size: 3.4vw;
+    font-weight: 800;
+    line-height: 4vw;
+}
+
+#left h5{
+    font-size: 1.4vw;
+    font-weight: 400;
+    line-height: 3vw;
+    color: rgb(182, 182, 182);
+    flex-wrap: nowrap;
+    margin-top: .5vw;
+}
+
+#left p{
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    color: rgb(182, 182, 182);
+    flex-wrap: nowrap;
+    margin-bottom: 1vw;;
+}
+
+#left h4{
+    font-size: 1.3vw;
+    font-weight: 800;
+    line-height: 2.5vw;
+    color: rgb(0, 0, 0);
+    flex-wrap: nowrap;
+}
+
+button{
+    margin-top: 1vw;
+    padding: 1vw 3vw;
+    border-radius: 10px;
+    border: none;
+    background: rgb(216,87,80);
+    background: linear-gradient(90deg, rgba(255,104,153,1) 0%, rgb(231, 98, 91) 88%);
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+
+
+#right{
+position: relative;
+display: flex;
+align-items: center;
+}
+
+#right img{
+    width: 80%;
+}
+
+#right img{
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+}
+
+#right .color-box{
+    position: absolute;
+    right: 0;
+    height: 80%;
+    width: 60%;
+    border-radius: 20px 0px 0px 20px;
+    z-index: -1;
+    background: rgb(255,108,103);
+    background: linear-gradient(0deg, rgba(255,108,103,1) 0%, rgba(255,94,159,1) 100%);
+}
+
+#add-btn img{
+    width: 45px;
+    margin-bottom: 5px;
+}
+
+#add-btn{
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#socials{
+text-align: center;
+}
+
+#socials img{
+    height: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width:600px){
+    #nav{
+        height: 70px;
+        padding: 3vw 5vw;
+    }
+
+    #nav #nav-contents{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(216,87,80,1) 44%, rgba(255,104,153,1) 97%);
+        position:absolute;
+        top: 75px;
+        right:0;
+        z-index: 3;
+        padding: 5vw 5vw;
+        color: white;
+    }
+    #nav img{
+        height: 40px;
+        width: 40px;
+    }
+    .ri-menu-5-line{
+        display: inherit;
+        font-size: 7.4vw;
+        font-weight: 800;
+        float: right;
+        color: white;
+        padding: 1.5vw;
+        border-radius: 50%;
+        background:  linear-gradient(0deg, rgba(216,87,80,1) 44%, rgba(255,104,153,1) 97%);
+    }
+    
+    #main-content{
+        flex-direction: column-reverse;
+        justify-content: flex-end;  
+        background: rosybrown;  
+        height: calc(100% - 70px);
+    }
+    #right img{
+        width: 80%;
+    }
+    #right .color-box{
+        width: 60%;
+        height: 80%;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    #add-btn img{
+        width: 30px;
+    }
+    #add-btn{
+        font-size: 3vw;
+        margin-right: 5%;
+    }
+
+    #left{
+        width: 100%;
+        padding: 0vw 5vw;
+
+    }
+
+    #left #left-bar{
+        width: 1vw;
+        height: 45vw;
+        margin-top: 0.9vw;
+    }
+    #left  h1{
+        font-size: 13vw;
+        line-height: 16vw;
+    }
+    #left h5{
+        font-size: 4.55vw;
+        line-height: 8vw;
+    }
+    #left p{
+        font-size: 3.5vw;
+        line-height: 6vw;
+    }
+    #left h4{
+        margin-top: 2vw;
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    button{
+        margin-top: 2vw;
+        padding: 4vw 10vw;
+        font-size: 4vw;
+    }
+}
+
