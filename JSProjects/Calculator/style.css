@@ -1,84 +1,65 @@
-/* Reset some default styles */
-* {
+*{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    font-family: "Poppins";
 }
 
-/* Style for the entire page */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #edf1f4;
-}
-
-/* Style for the calculator container */
-.calculator {
-    position: relative;
-    display: grid;
-}
-
-/* Style for the result display */
-.calculator .buttons #value {
-    position: relative;
-    grid-column: span 4; /* Adjusted from span4 to span 4 */
-    user-select: none;
-    overflow: none;
+.container{
     width: 100%;
-    text-align: end;
-    color: #5166d6;
-    height: 100px;
-    line-height: 100px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    padding: 0 20px;
-    font-size: 2em;
-    font-weight: 500;
+    height: 100vh;
+    background-color: rgb(154, 207, 207);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Style for calculator buttons */
-.calculator .buttons span {
-    position: relative;
+.calculator{
+    background: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #ffff;
+    cursor: pointer;
     margin: 10px;
-    padding: 10px;
-    font-size: 1.2em;
-    user-select: none;
-    min-width: 40px;
+    transition: 0.2s ease-in-out ;
+}
+
+.calculator form input:hover{
+    background-color: aliceblue;
+    color: #3a4452;
+}
+
+
+form .display{
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #666;
-    border: 2px solid #edf1f4;
-    border-radius: 10px;
-    cursor: pointer;
+    margin: 20px 0;
 }
 
-/* Style for the clear button */
-.calculator .buttons span#clear {
-    grid-column: span 2;
-    background-color: #f44336;
-    color: #fff;
-    border: 2px solid #edf1f4;
+form .display input{
+    text-align: right;
+    font-size: 45px;
+    flex: 1;
+    box-shadow: none;
 }
 
-/* Styles for the plus and equal buttons */
-.calculator .buttons span#plus,
-.calculator .buttons span#equal {
-    grid-row: span 2;
-    background-color: #31a935;
-    color: #fff;
-    border: 2px solid #edf1f4;
+form input.equal{
+    width: 145px;
+    background-color: rgb(255, 68, 0);
+
 }
 
-/* Define styles for active buttons */
-.calculator .buttons span#clear:active,
-.calculator .buttons span#plus:active,
-.calculator .buttons span#equal:active {
-    /* Added vendor prefixes and adjusted shadow values */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 
-                -5px -5px 10px #fff,
-                inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+form input.operator{
+    background-color: rgb(255, 68, 0);
 }
